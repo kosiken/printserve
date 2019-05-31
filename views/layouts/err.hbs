@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{message}} {{code}}</title>
+     <link rel="stylesheet" href=" http://localhost:5000/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="http://localhost:5000/font-awesome/css/font-awesome.min.css">
+     <style>
+    body{
+        background-color: #131743;
+        color: whitesmoke
+    }
+    .center{
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        align-items: center;
+  justify-content:center;text-align: center;
+    }
+    .text-error{
+        display: block;
+        color:rgb(207, 64, 64);
+        margin:20px 0
+    }
+    .Container {
+  text-align: center;
+  position: relative;
+}
+.MainTitle {
+  display: block;
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+}
+.MainDescription {
+  max-width: 50%;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.MainGraphic {
+  position: relative;
+}
+.Cog {
+  width: 10rem;
+  height: 10rem;
+  fill: #99caff;
+  transition: easeInOutQuint();
+  -webkit-animation: CogAnimation 5s infinite;
+          animation: CogAnimation 5s infinite;
+}
+.Spanner {
+  position: absolute;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  top: 10%;
+  left: 20%;
+  width: 10rem;
+  height: 10rem;
+  fill: #cacfff;
+  -webkit-animation: SpannerAnimation 4s infinite;
+          animation: SpannerAnimation 4s infinite;
+}
+.Hummingbird {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  fill: #30A9DE;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@-webkit-keyframes CogAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes CogAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="container center">
+    {{{body}}}
+   
+    </div>
+    
+    {{>footer}}
+    <script src=" http://localhost:5000/jquery/jquery.min.js"></script>
+</body>
+</html>

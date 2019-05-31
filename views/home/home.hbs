@@ -1,0 +1,24 @@
+<div class="containet messages">
+  {{#if messages}}
+    {{#each messages}}
+      <div class="notification">
+        <h2>{{date}}</h2>
+        <p>
+          {{body}}
+        </p>
+      </div>
+
+    {{/each}}
+    <hr>
+    <a href="/jobAdmin">Whats on the cue</a>
+  {{else}}
+<div class="no-notification">
+  <h1>
+    NO MESSAGES
+  </h1>
+
+</div>
+ <hr>
+    <a href="/jobAdmin">Whats on the cue</a>
+  {{/if}}
+</div>

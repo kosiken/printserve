@@ -1,0 +1,46 @@
+<div class="content">
+  <div class="container" style="padding: 20px;">
+    <div class="start flex">
+      <div class="illus">
+        <img src="f0bb79e728b4dc3226f777e0e6666beb.svg" style="max-width: 360px" alt="KRC undraw">
+      </div>
+      <div class="story-div" style="padding: 10px 5px 10px 25px">
+        <h1 class="purple" style="margin-bottom: 0">Branding and Designing Redefined</h1>
+        <small style="display: block;margin-bottom:15px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, quidem. Voluptas assumenda expedita sint hic!</small>
+        <a href="#login" class="btn btn-primary">Login</a><a href="#products"  class="btn accent">Register</a>
+      </div>
+    </div>
+  </div>
+ 
+  <div class=" full gradient flexer" id="login">
+    <div class="container">
+      <div class="show">
+        <div class="card shadow">
+
+          <div class="card-body">
+            <h5 class="card-title">Fill this</h5>
+
+            <form action="/login" method="post">
+              {{#if message}}
+              <h6 class="card-subtitle mb-2 text-muted">{{message}}</h6>
+              {{/if}}
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                  placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll contact you on this when its done.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="secrets*">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button> <a href="/register">Register</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

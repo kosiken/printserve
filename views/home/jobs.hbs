@@ -1,0 +1,31 @@
+<div class="containet messages">
+  {{#if jobs}}
+  <div class="card-columns">
+     
+ 
+    {{#each jobs}}
+       <div class="card">
+          <img class="card-img-top" src="./android-chrome-192x192.png" alt="lion">
+          <div class="card-body">
+              <h4 class="card-title">{{userMail}}</h4>
+              <p class="card-text">{{shortName}}</p>
+          </div>
+      </div>
+    
+     
+
+    {{/each}}
+     </div>
+    <hr>
+    <a href="/jobAdmin">Whats on the cue</a>
+  {{else}}
+<div class="no-notification">
+  <h1>
+    NO JOBS
+  </h1>
+
+</div>
+ <hr>
+    <a href="./index.html">create</a>
+  {{/if}}
+</div>
