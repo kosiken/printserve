@@ -27,7 +27,7 @@ async function dataGet(files,req) {
     let name=file.name
 
     let mill = Date(Date.now()), DateString = mill.slice(4, mill.indexOf(/\d{2}:\d{2}:\d{2}/.exec(mill))+ 8),dar = DateString.replace(/\s|:/ig,'_')
-    let short = name.replace(/\s|:/ig,'_'),filename= `${dar + short}`, mimeType = mime.getType(short)
+    let short = name.replace(/\s|:/ig,'_'),filename= `${dar + short}`, mimeType = mime.lookup(short)
    if(('application/pdf')===mimeType){ let { numpages:n} = await     PDF(file.data, {version:'v2.0.550'}); numpages+=n;nos=n}
     else if(('application/vnd.openxmlformats-officedocument.wordprocessingml.document')===(mimeType)) {
         numpages+=5; nos=5
